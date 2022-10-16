@@ -1,3 +1,21 @@
-<mat-toolbar>
-    <h1>Data Structures & Algorithms</h1>
+<mat-toolbar class="menu" color="primary">
+    <!-- Title -->
+    <span>Data Structures & Algorithms</span>
+
+    <!-- Menu -->
+    <button class="menu-entry" mat-button [matMenuTriggerFor]="dataStructuresMenu" color="seconday"
+        aria-label="Data Structures Menu">
+        Data Structures
+    </button>
+
+    <mat-menu #dataStructuresMenu="matMenu">
+        <button mat-menu-item [routerLink]="['hash-table']">
+            <mat-icon>tag</mat-icon>
+            <span>Hash Table</span>
+        </button>
+    </mat-menu>
 </mat-toolbar>
+
+<div class="app-container">
+    <router-outlet></router-outlet>
+</div>
