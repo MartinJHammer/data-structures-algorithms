@@ -1,17 +1,15 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { IndexComponent } from './components/index/index.component';
 import { HashTableIndexComponent } from './components/index/hash-table-index.component';
-
-
+import { HasTableModule } from './hash-table-routing.module';
 
 @NgModule({
-  declarations: [
-    IndexComponent,
-    HashTableIndexComponent
-  ],
   imports: [
-    CommonModule
+    CommonModule,
+    HasTableModule
+  ],
+  declarations: [
+    HashTableIndexComponent
   ]
 })
 export class HashTableModule { }
