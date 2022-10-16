@@ -1,23 +1,26 @@
 import { AppComponent } from './app.component';
 import {
-    async,
     ComponentFixture,
     TestBed
 } from '@angular/core/testing';
+import { material } from '../app.module';
 
 describe('App Component', () => {
     let component: AppComponent;
     let fixture: ComponentFixture<AppComponent>;
 
-    beforeEach(async(() => {
+    beforeEach((() => {
         TestBed.configureTestingModule({
+            imports: [
+                ...material
+            ],
             declarations: [AppComponent]
         });
         fixture = TestBed.createComponent(AppComponent);
         component = fixture.componentInstance;
     }));
 
-    test('should exist', () => {
+    it('should exist', () => {
         expect(component).toBeDefined();
     });
 });

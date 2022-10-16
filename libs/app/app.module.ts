@@ -5,16 +5,16 @@ import { MatIconModule } from '@angular/material/icon';
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { AppRoutingModule } from './app-routing.module';
-import { AppComponent } from './app.component';
+import { AppComponent } from './components/app.component';
 
 
-const basic = [
+export const basic = [
   BrowserModule,
   AppRoutingModule,
   BrowserAnimationsModule
 ];
 
-const material = [
+export const material = [
   MatToolbarModule,
   MatIconModule
 ];
